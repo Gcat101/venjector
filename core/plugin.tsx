@@ -6,6 +6,7 @@
 
 import { definePluginSettings } from "@api/Settings";
 import definePlugin, { OptionType, PluginNative } from "@utils/types";
+import { Toasts } from "@webpack/common";
 
 // KEEP THIS! Generates native code.
 const Native = VencordNative.pluginHelpers.Core as PluginNative<typeof import("./native")>;
@@ -39,6 +40,14 @@ export default definePlugin({
 	patches: [],
 
 	start() {
-		if (!Native) return; // unused my ass
+		console.log(Native); // unused my ass
+		Toasts.show({
+			message: "Venjected :3",
+			id: Toasts.genId(),
+			type: Toasts.Type.MESSAGE,
+			options: {
+				position: Toasts.Position.BOTTOM
+			}
+		});
 	}
 });
