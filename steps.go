@@ -20,6 +20,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"io"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -359,7 +360,7 @@ func pnpmBuild() {
 }
 
 func replaceDev() {
-	/* log.Info("Turning Vencord into production")
+	log.Info("Turning Vencord into production")
 	repoLocation := filepath.Join(getConfigPath(), "cord")
 
 	f, err := os.OpenFile(filepath.Join(repoLocation, "scripts", "runInstaller.mjs"), os.O_RDWR, 0644)
@@ -372,7 +373,7 @@ func replaceDev() {
 	lines = []byte(strings.Replace(string(lines), `VENCORD_DEV_INSTALL: "1"`, "", 1))
 
 	err = os.WriteFile(filepath.Join(repoLocation, "scripts", "runInstaller.mjs"), lines, 0644)
-	fatalIfError("Failed to write runInstaller.mjs", err) */
+	fatalIfError("Failed to write runInstaller.mjs", err)
 }
 
 func injecc() {
