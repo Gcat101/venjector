@@ -4,8 +4,7 @@ Welcome to Venjector, the plugin loader for the cutest client mod :3
 
 To install:
 
-- [Experimental] A GitHub Action is available [here](https://github.com/tizu69/venjector/actions),
-  select the newest successful build, then download for your OS.
+- ~~Use the GitHub Action artifact for your OS~~
 - Use the go install command, [which requires go](https://go.dev/doc/install)
 
 ``` sh
