@@ -369,7 +369,7 @@ func replaceDev() {
 	lines, err := io.ReadAll(f)
 	fatalIfError("Failed to read runInstaller.mjs", err)
 
-	lines = []byte(strings.Replace(string(lines), `VENCORD_USER_DATA_DIR: BASE_DIR,`, "", 1))
+	// lines = []byte(strings.Replace(string(lines), `VENCORD_USER_DATA_DIR: BASE_DIR,`, "", 1))
 	lines = []byte(strings.Replace(string(lines), `VENCORD_DEV_INSTALL: "1"`, "", 1))
 
 	err = os.WriteFile(filepath.Join(repoLocation, "scripts", "runInstaller.mjs"), lines, 0644)
