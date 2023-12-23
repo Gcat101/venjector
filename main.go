@@ -86,7 +86,7 @@ func main() {
 
 		switch process {
 		case 0: // rebuild
-			newProgress(9)
+			newProgress(8)
 			setVal(1, "Downloading Vencord", pullRepo)
 			setVal(2, "Installing dependencies", pnpmInstall)
 			setVal(3, "Copying plugins", copyOverrides)
