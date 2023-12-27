@@ -46,7 +46,7 @@ func ensurePnpm() {
 }
 
 func ensureGit() {
-	command := exec.Command("git", "-v")
+	command := exec.Command("git", "--version")
 
 	buf := new(bytes.Buffer)
 	command.Stdout = buf
